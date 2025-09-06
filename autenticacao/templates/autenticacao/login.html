@@ -1,0 +1,21 @@
+{% extends 'autenticacao/base/base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'autenticacao/login.css' %}">
+    <link rel="stylesheet" href="{% static 'autenticacao/header.css' %}">
+    <link rel="stylesheet" href="{% static 'autenticacao/footer.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <form method="post" class="login-form">
+        <h2>Acessar o Sistema</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Entrar</button>
+    </form>
+</div>
+{% endblock %}

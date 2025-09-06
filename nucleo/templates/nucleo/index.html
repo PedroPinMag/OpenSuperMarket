@@ -1,0 +1,15 @@
+{% extends 'nucleo/base/base.html' %}
+{% load static %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'nucleo/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="index-container">
+    <h2>Bem-vindo ao Sistema de Gestão</h2>
+    <p>Selecione uma das opções no menu superior para começar.</p>
+</div>
+{% endblock %}
