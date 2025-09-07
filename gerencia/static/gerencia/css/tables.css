@@ -1,0 +1,24 @@
+/* Tabelas e Listas */
+.list-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.list-container th, .list-container td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+}
+.list-container th {
+    background-color: #f8f9fa;
+}
+.actions .btn-edit, .actions .btn-remove {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.btn-edit { background-color: #ffc107; }
+.btn-remove { background-color: #dc3545; }

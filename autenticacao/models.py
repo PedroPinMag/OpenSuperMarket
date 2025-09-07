@@ -48,5 +48,9 @@ class Funcionario(AbstractUser):
             self.matricula = f'{prefixo}{sequencial:04d}'
         super().save(*args, **kwargs)  # Salva o objeto no banco de dados
 
+    def e_gerente(self):
+        """Verifica se o funcionário tem a função de Gerente."""
+        return self.funcoes.filter(nome='gerente').exists()
+
     def __str__(self):
         return self.get_full_name() or self.username

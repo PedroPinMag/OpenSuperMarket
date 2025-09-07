@@ -1,0 +1,23 @@
+/* Layout Principal */
+.gerencia-wrapper {
+    display: flex;
+    min-height: 80vh;
+}
+
+.sidebar-container {
+    flex: 0 0 250px; /* Largura da sidebar */
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+}
+
+.content-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #fff;
+    flex-grow: 1;
+}

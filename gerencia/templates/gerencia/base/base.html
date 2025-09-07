@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gerência{% endblock %} - OpenSuperMarket</title>
+
+    {# CSS Principal do Site (para ter uma base) #}
+    <link rel="stylesheet" href="{% static 'nucleo/base.css' %}">
+
+    {# CSS Específico da Gerência #}
+    <link rel="stylesheet" href="{% static 'gerencia/css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'gerencia/css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'gerencia/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'gerencia/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'gerencia/css/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'gerencia/css/tables.css' %}">
+    <link rel="stylesheet" href="{% static 'gerencia/css/messages.css' %}">
+
+    {# CSS dos Modais (AGORA SEPARADOS) #}
+    <link rel="stylesheet" href="{% static 'gerencia/css/modal_edit_funcionario.css' %}">
+    <link rel="stylesheet" href="{% static 'gerencia/css/modal_confirm_remove.css' %}">
+</head>
+<body>
+    <div class="gerencia-wrapper">
+        <div class="sidebar-container">
+            {% include 'gerencia/base/parts/sidebar.html' %}
+        </div>
+        <div class="content-container">
+            {% include 'gerencia/base/parts/header.html' %}
+
+            <div class="main-content">
+                {% block gerencia_content %}{% endblock %}
+            </div>
+
+            {% include 'gerencia/base/parts/footer.html' %}
+        </div>
+    </div>
+    <script src="{% static 'gerencia/js/script.js' %}"></script>
+</body>
+</html>

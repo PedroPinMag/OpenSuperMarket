@@ -1,0 +1,25 @@
+/* Sidebar */
+.sidebar {
+    padding: 20px;
+}
+.sidebar h3 {
+    margin-top: 0;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+}
+.sidebar a:hover {
+    background-color: #e9ecef;
+}
+.sidebar a.active {
+    background-color: #007bff;
+    color: white;
+}
